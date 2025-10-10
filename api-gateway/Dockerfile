@@ -5,8 +5,6 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-COPY settings.xml /root/.m2/settings.xml
-
 RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21-jre
